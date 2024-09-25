@@ -11,7 +11,7 @@ from email.mime.image import MIMEImage
 SENSOR_PINS = [4, 17, 23, 24, 25]  
 BUZZER_PIN = 18
 
-IMAGE_SAVE_PATH = f'/home/mhamza-rpi/Desktop/oop_project/images'  
+IMAGE_SAVE_PATH = f'/home/hamza/Desktop/oop_project/images'  
 
 class Devices:
 	def is_triggered(self):
@@ -85,12 +85,13 @@ def main():
                 image_path = camera.capture_image()  
                 if image_path:
                     print(f"Image Save Successfully")
-                email = 'fa23bese0003@maju.edu.pk'
-                remail = 'fa23bese0003@maju.edu.pk'
-                app_password = 'oraoxnhjzaiwvsis'
+                email = 'xxxxx@gmail.com'
+                remail = 'xxxxx@gmail.com'
+                app_password = 'xxxxxxxxxxxx'
 
-                subject = 'Testing with Image Attachment'
-                message = 'This is testing with an image attachment.'
+                subject = f"Theft is detected on system at {timestamp}"
+
+                message = f"Theft is detected on system at {timestamp} \nHere is the attachment:\n"
 
                 msg = MIMEMultipart()
                 msg['From'] = email
